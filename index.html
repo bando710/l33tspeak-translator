@@ -8,22 +8,24 @@
     <script defer src="translator.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the l33tspeak Translator!</h1>
-        <form id="translator-form">
-            <label for="text">Enter text:</label>
-            <input type="text" id="text" name="text">
-            <br>
-            <label for="direction">Choose translation direction:</label>
-            <select id="direction" name="direction">
-                <option value="toEnglish">l33tspeak to English</option>
-                <option value="toLeetspeak">English to l33tspeak</option>
-            </select>
-            <br>
-            <button type="submit">Translate</button>
-        </form>
-        <h2>Translation:</h2>
-        <p id="result"></p>
+    <div class="outer-container">
+        <div class="container">
+            <h1>Welcome to the l33tspeak Translator!</h1>
+            <form id="translator-form">
+                <label for="text">Enter text:</label>
+                <textarea id="text" name="text" rows="10" placeholder="Enter your l33tspeak or English text here..."></textarea>
+                <br>
+                <label for="direction">Choose translation direction:</label>
+                <select id="direction" name="direction">
+                    <option value="toEnglish">l33tspeak to English</option>
+                    <option value="toLeetspeak">English to l33tspeak</option>
+                </select>
+                <br>
+                <button type="submit">Translate</button>
+            </form>
+            <h2>Translation:</h2>
+            <div id="result" class="result-box"></div>
+        </div>
     </div>
 </body>
 </html>

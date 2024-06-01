@@ -7,6 +7,18 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
+}
+
+.outer-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,10 +27,15 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90%;
+    overflow-y: auto;
 }
 
 h1 {
     color: #004080; /* Navy */
+    margin-bottom: 20px;
 }
 
 form {
@@ -28,17 +45,26 @@ form {
 label {
     color: #4682B4; /* Blue */
     font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
-input[type="text"], select {
+textarea, select {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-top: 10px;
     margin-bottom: 20px;
     border: 1px solid #004080;
     border-radius: 5px;
     background-color: #1E1E1E;
     color: #FFFFFF;
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 300px;
 }
 
 button {
@@ -49,6 +75,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -57,9 +85,18 @@ button:hover {
 
 h2 {
     color: #4682B4; /* Blue */
+    margin-top: 20px;
 }
 
-#result {
+.result-box {
     margin-top: 20px;
     font-size: 1.2em;
+    padding: 15px;
+    background-color: #1E1E1E;
+    border: 1px solid #004080;
+    border-radius: 5px;
+    white-space: pre-wrap; /* To maintain formatting for paragraphs */
+    word-wrap: break-word; /* Ensure long words break correctly */
+    max-height: 300px;
+    overflow-y: auto;
 }
