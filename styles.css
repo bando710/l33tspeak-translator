@@ -118,8 +118,9 @@ h2 {
     background-color: #1E1E1E;
     border: 1px solid #004080;
     border-radius: 5px;
-    white-space: pre-wrap; /* To maintain formatting for paragraphs */
-    word-wrap: break-word; /* Ensure long words break correctly */
+    resize: vertical;
     max-height: 300px;
     overflow-y: auto;
+    white-space: pre-wrap; /* To maintain formatting for paragraphs */
+    word-wrap: break-word; /* Ensure long words break correctly */
 }
