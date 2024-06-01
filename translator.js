@@ -1,16 +1,16 @@
 const leetspeakToEnglish = {
-    '4': 'A', '@': 'A', '8': 'B', '(': 'C', '<': 'C', '3': 'E', '6': 'G', '9': 'G',
-    '1': 'I', '!': 'I', '0': 'O', '5': 'S', '$': 'S', '7': 'T', '+': 'T', '2': 'Z'
+    '4': 'a', '@': 'a', '8': 'b', '(': 'c', '<': 'c', '3': 'e', '6': 'g', '9': 'g',
+    '1': 'i', '!': 'i', '0': 'o', '5': 's', '$': 's', '7': 't', '+': 't', '2': 'z'
 };
 
-const englishToLeetspeak = Object.fromEntries(Object.entries(leetspeakToEnglish).map(([key, value]) => [value, key]));
+const englishToLeetspeak = Object.fromEntries(Object.entries(leetspeakToEnglish).map(([key, value]) => [value.toUpperCase(), key]));
 
 function translateLeetspeakToEnglish(text) {
-    return text.split('').map(char => leetspeakToEnglish[char] || char).join('');
+    return text.split('').map(char => leetspeakToEnglish[char.toLowerCase()] || char).join('');
 }
 
 function translateEnglishToLeetspeak(text) {
-    return text.toUpperCase().split('').map(char => englishToLeetspeak[char] || char).join('');
+    return text.toLowerCase().split('').map(char => englishToLeetspeak[char.toUpperCase()] || char).join('');
 }
 
 document.getElementById('translator-form').addEventListener('submit', function (event) {
@@ -21,9 +21,9 @@ document.getElementById('translator-form').addEventListener('submit', function (
     let result;
     
     if (direction === 'toEnglish') {
-        result = translateLeetspeakToEnglish(text);
+        result = translateLeetspeakToEnglish(text).toLowerCase();
     } else {
-        result = translateEnglishToLeetspeak(text);
+        result = translateEnglishToLeetspeak(text).toLowerCase();
     }
     
     document.getElementById('result').innerText = result;
