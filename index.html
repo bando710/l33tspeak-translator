@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l33tspeak Translator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="translator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the l33tspeak Translator!</h1>
+        <form id="translator-form">
+            <label for="text">Enter text:</label>
+            <input type="text" id="text" name="text">
+            <br>
+            <label for="direction">Choose translation direction:</label>
+            <select id="direction" name="direction">
+                <option value="toEnglish">l33tspeak to English</option>
+                <option value="toLeetspeak">English to l33tspeak</option>
+            </select>
+            <br>
+            <button type="submit">Translate</button>
+        </form>
+        <h2>Translation:</h2>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
