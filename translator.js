@@ -6,7 +6,13 @@ const leetspeakToEnglish = {
 const englishToLeetspeak = Object.fromEntries(Object.entries(leetspeakToEnglish).map(([key, value]) => [value.toUpperCase(), key]));
 
 function translateLeetspeakToEnglish(text) {
-    return text.split('').map(char => leetspeakToEnglish[char.toLowerCase()] || char).join('');
+    return text.split(' ').map(word => {
+        const parts = word.split('-');
+        const translatedParts = parts.map(part => {
+            return part.split('').map(char => leetspeakToEnglish[char.toLowerCase()] || char).join('');
+        });
+        return translatedParts.join('-');
+    }).join(' ');
 }
 
 function translateEnglishToLeetspeak(text) {
