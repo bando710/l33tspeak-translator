@@ -124,3 +124,15 @@ h2 {
     white-space: pre-wrap; /* To maintain formatting for paragraphs */
     word-wrap: break-word; /* Ensure long words break correctly */
 }
+
+pre {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 15px;
+    background-color: #1E1E1E;
+    border: 1px solid #004080;
+    border-radius: 5px;
+    overflow-y: auto;
+    white-space: pre-wrap; /* To maintain formatting for paragraphs */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}

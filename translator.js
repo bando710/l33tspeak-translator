@@ -26,5 +26,5 @@ document.getElementById('translator-form').addEventListener('submit', function (
         result = translateEnglishToLeetspeak(text).toLowerCase();
     }
     
-    document.getElementById('result').innerText = result;
+    document.getElementById('result').innerHTML = result;
 });
